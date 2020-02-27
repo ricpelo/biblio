@@ -10,7 +10,7 @@ $config = [
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
         '@uploads' => '@app/web/uploads',
         '@uploadsUrl' => '/uploads',
         '@img' => '@app/web/img',
@@ -74,6 +74,12 @@ $config = [
         ],
     ],
     'params' => $params,
+    'modules' => [
+        'datecontrol' => [
+            'class' => \kartik\datecontrol\Module::class,
+            'displayTimezone' => 'Asia/Kolkata',
+        ],
+    ],
 ];
 
 if (YII_ENV_DEV) {
